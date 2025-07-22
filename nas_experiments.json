@@ -1,0 +1,182 @@
+[
+  {
+    "arch": {
+      "layers": [
+        {
+          "type": "Dropout",
+          "rate": 0.2
+        },
+        {
+          "type": "MaxPool2D",
+          "pool_size": 2
+        },
+        {
+          "type": "Conv2D",
+          "filters": 64,
+          "kernel": 5
+        },
+        {
+          "type": "Conv2D",
+          "filters": 64,
+          "kernel": 3
+        },
+        {
+          "type": "Dense",
+          "units": 10
+        }
+      ],
+      "hparams": {
+        "learning_rate": 0.001,
+        "optimizer": "adam",
+        "batch_size": 64
+      }
+    },
+    "metrics": {
+      "val_acc": 0.9814166666666667,
+      "num_params": 130762,
+      "train_time": 70.09148097038269,
+      "val_loss": 0.061773753305276236
+    },
+    "config": {
+      "strategy": "random",
+      "constraints": {
+        "max_params": 100000
+      }
+    }
+  },
+  {
+    "arch": {
+      "layers": [
+        {
+          "type": "Dropout",
+          "rate": 0.3
+        },
+        {
+          "type": "MaxPool2D",
+          "pool_size": 2
+        },
+        {
+          "type": "MaxPool2D",
+          "pool_size": 2
+        },
+        {
+          "type": "MaxPool2D",
+          "pool_size": 2
+        },
+        {
+          "type": "MaxPool2D",
+          "pool_size": 2
+        },
+        {
+          "type": "Dense",
+          "units": 10
+        }
+      ],
+      "hparams": {
+        "learning_rate": 0.001,
+        "optimizer": "adam",
+        "batch_size": 64
+      }
+    },
+    "metrics": {
+      "val_acc": 0.099,
+      "num_params": 20,
+      "train_time": 54.70806908607483,
+      "val_loss": 2.313953442255656
+    },
+    "config": {
+      "strategy": "random",
+      "constraints": {
+        "max_params": 100000
+      }
+    }
+  },
+  {
+    "arch": {
+      "layers": [
+        {
+          "type": "MaxPool2D",
+          "pool_size": 2
+        },
+        {
+          "type": "Dropout",
+          "rate": 0.3
+        },
+        {
+          "type": "Dropout",
+          "rate": 0.2
+        },
+        {
+          "type": "Conv2D",
+          "filters": 32,
+          "kernel": 5
+        },
+        {
+          "type": "Dense",
+          "units": 10
+        }
+      ],
+      "hparams": {
+        "learning_rate": 0.001,
+        "optimizer": "adam",
+        "batch_size": 64
+      }
+    },
+    "metrics": {
+      "val_acc": 0.94525,
+      "num_params": 46922,
+      "train_time": 35.98853659629822,
+      "val_loss": 0.1656307207743327
+    },
+    "config": {
+      "strategy": "random",
+      "constraints": {
+        "max_params": 100000
+      }
+    }
+  },
+  {
+    "arch": {
+      "layers": [
+        {
+          "type": "Conv2D",
+          "filters": 32,
+          "kernel": 5
+        },
+        {
+          "type": "Dense",
+          "units": 64
+        },
+        {
+          "type": "Dropout",
+          "rate": 0.3
+        },
+        {
+          "type": "Dense",
+          "units": 64
+        },
+        {
+          "type": "Dense",
+          "units": 10
+        }
+      ],
+      "hparams": {
+        "learning_rate": 0.001,
+        "optimizer": "adam",
+        "batch_size": 64
+      }
+    },
+    "metrics": {
+      "val_acc": 0.97825,
+      "num_params": 1390154,
+      "train_time": 61.95031428337097,
+      "val_loss": 0.07216672032078107
+    },
+    "config": {
+      "strategy": "random",
+      "constraints": {
+        "max_params": 100000
+      }
+    }
+  }
+]
