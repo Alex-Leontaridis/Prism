@@ -4,11 +4,20 @@
       "layers": [
         {
           "type": "Dense",
-          "units": 128
+          "units": 256
         },
         {
-          "type": "MaxPool2D",
-          "pool_size": 2
+          "type": "Dropout",
+          "rate": 0.2
+        },
+        {
+          "type": "Dropout",
+          "rate": 0.2
+        },
+        {
+          "type": "Conv2D",
+          "filters": 64,
+          "kernel": 5
         },
         {
           "type": "Dense",
@@ -22,24 +31,19 @@
       }
     },
     "metrics": {
-      "val_acc": 0.96725,
-      "num_params": 101770,
-      "train_time": 34.47965383529663,
-      "val_loss": 0.11034334641695022
+      "val_acc": 0.97,
+      "num_params": 203530,
+      "train_time": 35.08181142807007,
+      "val_loss": 0.09517674615979195
     },
-    "score": 0.84778
+    "score": 0.76647
   },
   {
     "arch": {
       "layers": [
         {
-          "type": "MaxPool2D",
-          "pool_size": 2
-        },
-        {
-          "type": "Conv2D",
-          "filters": 16,
-          "kernel": 3
+          "type": "Dropout",
+          "rate": 0.2
         },
         {
           "type": "Conv2D",
@@ -63,12 +67,51 @@
       }
     },
     "metrics": {
-      "val_acc": 0.9825,
-      "num_params": 76778,
-      "train_time": 50.030338525772095,
-      "val_loss": 0.056355713109175365
+      "val_acc": 0.9833333333333333,
+      "num_params": 260458,
+      "train_time": 81.15585494041443,
+      "val_loss": 0.05609976217150688
     },
-    "score": 0.905722
+    "score": 0.6810433333333333
+  },
+  {
+    "arch": {
+      "layers": [
+        {
+          "type": "Dense",
+          "units": 64
+        },
+        {
+          "type": "MaxPool2D",
+          "pool_size": 2
+        },
+        {
+          "type": "Conv2D",
+          "filters": 64,
+          "kernel": 5
+        },
+        {
+          "type": "Dropout",
+          "rate": 0.3
+        },
+        {
+          "type": "Dense",
+          "units": 10
+        }
+      ],
+      "hparams": {
+        "learning_rate": 0.001,
+        "optimizer": "adam",
+        "batch_size": 64
+      }
+    },
+    "metrics": {
+      "val_acc": 0.9575,
+      "num_params": 50890,
+      "train_time": 33.36665987968445,
+      "val_loss": 0.14018160798152288
+    },
+    "score": 0.90661
   },
   {
     "arch": {
@@ -78,21 +121,6 @@
           "rate": 0.5
         },
         {
-          "type": "Conv2D",
-          "filters": 32,
-          "kernel": 5
-        },
-        {
-          "type": "Conv2D",
-          "filters": 64,
-          "kernel": 3
-        },
-        {
-          "type": "Conv2D",
-          "filters": 16,
-          "kernel": 5
-        },
-        {
           "type": "MaxPool2D",
           "pool_size": 2
         },
@@ -108,46 +136,11 @@
       }
     },
     "metrics": {
-      "val_acc": 0.982,
-      "num_params": 67994,
-      "train_time": 136.9697813987732,
-      "val_loss": 0.060486622234185536
+      "val_acc": 0.7649166666666667,
+      "num_params": 1970,
+      "train_time": 32.62202787399292,
+      "val_loss": 0.6093305066426595
     },
-    "score": 0.914006
-  },
-  {
-    "arch": {
-      "layers": [
-        {
-          "type": "Conv2D",
-          "filters": 32,
-          "kernel": 5
-        },
-        {
-          "type": "Dense",
-          "units": 64
-        },
-        {
-          "type": "Dense",
-          "units": 128
-        },
-        {
-          "type": "Dense",
-          "units": 10
-        }
-      ],
-      "hparams": {
-        "learning_rate": 0.001,
-        "optimizer": "adam",
-        "batch_size": 64
-      }
-    },
-    "metrics": {
-      "val_acc": 0.9849166666666667,
-      "num_params": 1394954,
-      "train_time": 62.413368225097656,
-      "val_loss": 0.05440493594606718
-    },
-    "score": -13.359577333333334
+    "score": 0.7629466666666667
   }
 ]
